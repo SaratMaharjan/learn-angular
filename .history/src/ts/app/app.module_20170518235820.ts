@@ -7,8 +7,8 @@ import { AppComponent } from "./app.component";
 import "../../scss/styles.scss";
 
 @NgModule({
-    imports: [ BrowserModule, FormsModule ],
+    imports: [ BrowserModule ],
     declarations: [ AppComponent ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
 })
 export class AppModule { }

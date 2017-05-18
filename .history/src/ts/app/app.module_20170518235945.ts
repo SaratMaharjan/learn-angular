@@ -9,6 +9,6 @@ import "../../scss/styles.scss";
 @NgModule({
     imports: [ BrowserModule, FormsModule ],
     declarations: [ AppComponent ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
 })
 export class AppModule { }
