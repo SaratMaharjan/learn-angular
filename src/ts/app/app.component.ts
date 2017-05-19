@@ -8,17 +8,6 @@ import { Component } from "@angular/core";
 
 export class AppComponent {
 
-    public header: string = "Color Tool";
-
-    public colors: string[] = [
-        "red", "white", "green", "orange"
-    ];
-
-    public newColor: string = "";
-
-    public addColor(){
-        this.colors.push(this.newColor);
-        this.newColor = "";
-    }
+    title = "Tour of Heroes";
 
 }

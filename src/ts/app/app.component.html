@@ -1,16 +1,10 @@
-<div>
-    <h1>{{header}}</h1>
-    <ul>
-        <li *ngFor="let color of colors">
-            {{color}}
-        </li>
-    </ul>
-    <form>
-        <div>
-            <label for="new-color">New Color:</label>
-            <input type="text" id="new-color-input" name="newColor" [(ngModel)]="newColor"
-            (keyup.enter)="addColor()">
-            <button type="button" (click)="addColor()">Add Color</button>
-        </div>
-    </form>
-</div>
+<!--<my-color></my-color>-->
+
+<h1>{{title}}</h1>
+
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+
+<router-outlet></router-outlet>
