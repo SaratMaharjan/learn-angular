@@ -1,9 +1,9 @@
 
 <div>
-    <h1>{{header}}</h1>
+    <h1>{{header | uppercase}}</h1>
     <ul>
         <li *ngFor="let color of colors">
-            {{color}}
+            {{color | capitalize}}
         </li>
     </ul>
     <form>
@@ -13,4 +13,22 @@
             <button type="button" (click)="addColor()">Add Color</button>
         </div>
     </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th><th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people | slice: startPerson: endPerson">
+                <td>{{ person.firstName }}</td><td>{{ person.lastName }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button #prevButton type="button" (click)="prevPage()">Previous</button>
+    <button type="button" (click)="nextPage()">Next</button>
+
+    <div>{{ prevButton.innerHTML | json }}</div>
+    <div>{{ prevButton.parentNode | json }}</div>
 </div>

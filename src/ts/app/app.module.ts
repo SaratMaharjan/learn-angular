@@ -14,6 +14,7 @@ import { HeroesComponent } from "./heroes.component";
 import { HeroDetailComponent } from "./hero-detail.component";
 import { HeroService } from "./hero.service";
 
+import { CapitalizePipe } from "./pipes/capitalize.pipe";
 import { AppRoutingModule } from "./app-routing.module";
 
 import "../../scss/styles.scss";
@@ -31,7 +32,8 @@ import "../../scss/styles.scss";
         DashboardComponent,
         ColorComponent,
         HeroesComponent,
-        HeroDetailComponent
+        HeroDetailComponent,
+        CapitalizePipe
     ],
     providers: [
         HeroService
