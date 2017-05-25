@@ -13,6 +13,7 @@ import { ColorComponent } from "./color.component";
 import { HeroesComponent } from "./heroes.component";
 import { HeroDetailComponent } from "./hero-detail.component";
 import { HeroService } from "./hero.service";
+import { Logger } from './services/logger';
 
 import { CapitalizePipe } from "./pipes/capitalize.pipe";
 import { AppRoutingModule } from "./app-routing.module";
@@ -36,7 +37,8 @@ import "../../scss/styles.scss";
         CapitalizePipe
     ],
     providers: [
-        HeroService
+        HeroService,
+        Logger
     ],
     bootstrap: [ AppComponent ]
 })
