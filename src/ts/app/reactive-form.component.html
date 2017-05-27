@@ -1,0 +1,39 @@
+
+<form [formGroup]="profileForm">
+    <div>
+        <label for="first-name-input">First Name:</label>
+        <input type="text" id="first-name-input" formControlName="firstNameInput">
+        <br>
+        <span>Value: {{ profileForm.controls.firstNameInput.value }}</span>
+    </div>
+
+    <div>
+        <label for="last-name-input">Last Name:</label>
+        <input type="text" id="last-name-input" formControlName="lastNameInput">
+        <br>
+        <span>Value: {{ profileForm.controls.lastNameInput.value }}</span>
+    </div>
+
+    <div formGroupName="addressGroup">
+        <div>
+            <label for="street-input">Street:</label>
+            <input type="text" id="street-input" formControlName="streetInput">
+            <br>
+            <span>Value: {{ profileForm.controls.addressGroup.controls.streetInput.value }}</span>
+        </div>
+
+        <div>
+            <label for="city-input">City:</label>
+            <input type="text" id="city-input" formControlName="cityInput">
+            <br>
+            <span>Value: {{ profileForm.controls.addressGroup.controls.cityInput.value }}</span>
+        </div>
+
+        <div>
+            <label for="country-input">Country:</label>
+            <input type="text" id="country-input" formControlName="countryInput">
+            <br>
+            <span>Value: {{ profileForm.controls.addressGroup.controls.countryInput.value }}</span>
+        </div>
+    </div>
+</form>
